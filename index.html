@@ -50,34 +50,72 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Intro -->
+						<!-- portify -->
 							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+								<h2 class="major">Portify</h2>
+								<span class="image main"><img src="images/portify.png" alt="" /></span>
+								<h4>introduction / Problem Statement</h4>
+								<p>As an avid user of Spotify I was always dispointed by its genre filtering capabilities, particularly when it came to dance music.  I set out to create an application to solve this problem by combining the functionality of Spotify and Beatport, an online electronic music store which classifies it's electronic music collection into broad, discrete genre categories, unlike Spotify.</p>
+
+								<h4>Methodology / Implementation</h4>
+								<p>Portify consists of two decoupled applications written in diffent programming languages; a web scraper written in Python for collecting and processing the relevant tracks information from Spotify and Beatport and an interface for displaying and interacting with the data, created using the MERN tech stack.  </p>
+									
+								<p>The web scraper connects to Spotify through their API and requests the tracks information about a playlist.  For each track in the playlist the corresponding Beatport url is retrieved by scraping and sorting the urls from a Google search using the Requests-HTML library.  The Beatport genre associated with each url is then extracted by parsing the HTML using the Beautiful Soup library and selecting the genre by CSS selector .  Upon completion the data is loaded into a MongoDB database.  Python was chosen for this part of the project for its superior web scraping and data mining capabilities. </p>
+								
+								<p> To interact with the data a REST API was created using Express.js which pulled the data into a React app, which consisted of an interface. One major problem with web scraping is that data collected is rarely 100% accurate, and in this case things are no different.  From experience, around 5% of the tracks on Spotify were not on Beatport and another 5% returned an incorrect genre.  The later was largely due to flaws in the url selection algorithm targetting the data scraped from Google, which contained several, infrequent corner cases which are not accounted for.  To solve this problem Portify's interface allows for the Beatport url from which the track's genre was sourced to analyed in order to highlight any discrepencies, which can then be corrected for manually.  This mechanism conviniently allows for playlists to be cusomised and altered by taste as well.</p>
+
+								<p> The Portify interface supports full CRUD functionality.  Playlists can edited, copied, mergered, deleted and, importantly, sorted by genre.  Since the Spotify uri for each track is saved, Portify playlists can be uploaded back to Spotify on the click of a button. </p>
+
+								<h4>Conclusion</h4>
+								<p> Portify allows Spotify playlists to be sorted accurately into sub playlists based on their Beatport genre and uploaded back to Spotify.  Additionally playlists can be edited, copied, merged and deleted.</p>
+
+								<!-- <iframe width="100%" style="aspect-ratio: 420/315;"
+								src="https://www.youtube.com/embed/AedKDJQEM_A">
+								</iframe> -->
+								<hr />
+								<h3 class="major">Video Demonstration</h3>
+
+								<div id="player"></div>
+								<h4 style="margin-top: 1rem;">Timestamps</h4>
+								<ul>
+									<li><a value="Seek0" onclick="setCurrentTime(0)">0:00</a> : Web scraping with Python</li>
+									<li><a value="Seek1" onclick="setCurrentTime(1)">0:23</a> : Analysing/amending the data</li>
+									<li><a value="Seek2" onclick="setCurrentTime(2)">0:40</a> : Sorting & CRUD functionality</li>
+									<li><a value="Seek3" onclick="setCurrentTime(3)">1:11</a> : Updating Spotify account</li>
+								</ul>
+								
+								<hr />								
+
+								<h3 class="major">code</h3>
+								<ul class="actions">
+									<!-- <li><a href="#" class="button primary">Live demo</a></li> -->
+									<li><a href="#" class="button">web scraper</a></li>
+									<li><a href="#" class="button">server</a></li>
+									<li><a href="#" class="button">interface</a></li>
+								</ul>
 							</article>
 
-						<!-- Work -->
+						<!-- e sports -->
 							<article id="work">
-								<h2 class="major">E-Sports App</h2>
+								<h2 class="major">E-Sports App - Front End</h2>
 
 								<span class="image main"><img src="images/vgc.png" alt="" /></span>
-								<div class="section">
+								<p class="section">
 								VCG is the front end mvp for an e-sports app (no server) which is currently under development, designed to recreate the experience of playing for a real football club, but virtually.  VGC will automate the running of 11v11 football tournaments.  Players and managers have different roles, players can be signed and released from contracts, formations are customisable and player statistics are tracked across history.
-							</div>
-								<hr />
+								</p>
+								<!-- <hr /> -->
+								<h4 class="major">Noteworthy Features</h4>
 								<ul>
 									<li>Fully responsive</li>
 									<li>Developed in React</li>
-									<li>Styled with Bootstrap/Styled Components/SASS</li>
-									<li>Deployed to Heroku</li>
-									<li>Includes Round Robin Generator</li>
-									<li>Ability to Customise Formations</li>
+									<li>Styled by Bootstrap/styled-components/SASS</li>
+									<li>Deployed to Netlify</li>
+									<li>Includes round robin generator</li>
+									<li>Customise formations</li>
 								</ul>
 								<hr />								
 								<!-- <h4>Notable Features</h4> -->
-								<ul class="actions ">
+								<ul class="actions right">
 									<li><a href="#" class="button primary">Live demo</a></li>
 									<li><a href="#" class="button">view code</a></li>
 								</ul>
@@ -86,7 +124,7 @@
 							<!-- </div> -->
 							</article>
 
-						<!-- About -->
+						<!-- trade wars -->
 							<article id="about">
 								<h2 class="major">Trading Simulator</h2>
 								<span class="image main"><img src="images/trade-wars.png" alt="" /></span>
@@ -94,19 +132,19 @@
 
 								
 
-								<h4 class="major">Notable Features</h4>
+								<h4 class="major">Noteworthy Features</h4>
 
 								<ul  >
-									<li>Developed by leveraging the MERN Tech Stack</li>
-									<li>Styled with Styled Components/CSS</li>
+									<li>Developed by leveraging the MERN tech stack</li>
+									<li>Styled by styled-components/CSS</li>
 									<li>Deployed to Heroku/Netlify</li>
-									<li>Fully Responsive</li>
-									<li>Persistant Login</li>
-									<li>Protected Routes</li>
-									<li>JWT Cookie Authentication</li>
-									<li>Bcrypt Password Hashing</li>
-									<li>Consumes Third Party API</li>
-									<li>CRUD Functionality</li>
+									<li>Fully responsive</li>
+									<li>Persistant login</li>
+									<li>Protected routes</li>
+									<li>JWT cookie authentication</li>
+									<li>Bcrypt password hashing</li>
+									<li>Consumes third party API</li>
+									<li>CRUD functionality</li>
 								</ul>
 
 								<hr />								
@@ -118,7 +156,7 @@
 
 								<!-- <hr />	 -->
 
-								<h4 >code snippets</h4>
+								<!-- <h4 >code snippets</h4>
 								<pre><code>i = 0;
 
 while (!deck.isInOrder()) {
@@ -137,7 +175,7 @@ deck.shuffle();
 i++;
 }
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre> -->
 
 							</article>
 
@@ -432,6 +470,25 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				var tag = document.createElement('script');
+				tag.src = "https://www.youtube.com/iframe_api";
+				var firstScriptTag = document.getElementsByTagName('script')[0];
+				firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+				var player;
+				function onYouTubeIframeAPIReady() {
+				  player = new YT.Player('player', {
+					// height: '210',
+					width: '100%',
+					aspectRatio: 'Ź10/340',
+					videoId: 'AedKDJQEM_A',
+				  });
+				}
+				function setCurrentTime(slideNum) {
+				  var object = [ 0, 23, 40, 71 ];
+				  player.seekTo(object[slideNum]);
+				}
+			  </script>
 
 	</body>
 </html>
