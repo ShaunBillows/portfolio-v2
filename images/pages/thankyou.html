@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dimension by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript> 
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<!-- <span class="icon fa-gem"></span> -->
+							<!-- <span class="fa fa-shuttle-space"></span> -->
+							<span class="fas fa-download fa-2x "></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Shaun Billows</h1>
+								<p>Software Engineer portfolio</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li >
+									<a href="#intro" class="button primary" 
+									style="border-radius: 0em;"
+									>
+									PROJECT I</a>
+									
+								</li>
+								<li><a href="#work">PROJECT II</a></li>
+								<li><a href="#about">PROJECT III</a></li>
+								<li><a href="#contact">CONTACT</a></li>
+								<li><a href="#elements">Elements</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- portify -->
+							<article id="intro">
+								<h2 class="major">Portify</h2>
+								<span class="image main"><img src="images/portify.png" alt="" /></span>
+								<h4>introduction / Problem Statement</h4>
+								<p>As an avid user of Spotify I was always dispointed by its genre filtering capabilities, particularly when it came to dance music.  I set out to create an application to solve this problem by combining the functionality of Spotify and Beatport, an online electronic music store which classifies it's electronic music collection into broad, discrete genre categories, unlike Spotify.</p>
+
+								<h4>Methodology / Implementation</h4>
+								<p>Portify consists of two decoupled applications written in diffent programming languages; a web scraper written in Python for collecting and processing the relevant tracks information from Spotify and Beatport and an interface for displaying and interacting with the data, created using the MERN tech stack.  </p>
+									
+								<p>The web scraper connects to Spotify through their API and requests the tracks information about a playlist.  For each track in the playlist the corresponding Beatport url is retrieved by scraping and sorting the urls from a Google search using the Requests-HTML library.  The Beatport genre associated with each url is then extracted by parsing the HTML using the Beautiful Soup library and selecting the genre by CSS selector .  Upon completion the data is loaded into a MongoDB database.  Python was chosen for this part of the project for its superior web scraping and data mining capabilities. </p>
+								
+								<p> To interact with the data a REST API was created using Express.js which pulled the data into a React app, which consisted of an interface. One major problem with web scraping is that data collected is rarely 100% accurate, and in this case things are no different.  From experience, around 5% of the tracks on Spotify were not on Beatport and another 5% returned an incorrect genre.  The later was largely due to flaws in the url selection algorithm targetting the data scraped from Google, which contained several, infrequent corner cases which are not accounted for.  To solve this problem Portify's interface allows for the Beatport url from which the track's genre was sourced to analyed in order to highlight any discrepencies, which can then be corrected for manually.  This mechanism conviniently allows for playlists to be cusomised and altered by taste as well.</p>
+
+								<p> The Portify interface supports full CRUD functionality.  Playlists can edited, copied, mergered, deleted and, importantly, sorted by genre.  Since the Spotify uri for each track is saved, Portify playlists can be uploaded back to Spotify on the click of a button. </p>
+
+								<h4>Conclusion</h4>
+								<p> Portify allows Spotify playlists to be sorted accurately into sub playlists based on their Beatport genre and uploaded back to Spotify.  Additionally playlists are stored in a database where they can be edited, copied, merged and deleted using a custom-made UI.</p>
+
+								<!-- <iframe width="100%" style="aspect-ratio: 420/315;"
+								src="https://www.youtube.com/embed/AedKDJQEM_A">
+								</iframe> -->
+								<hr />
+								<h3 class="major">Video Demonstration</h3>
+
+								<div id="player"></div>
+								<h4 style="margin-top: 1rem;">Timestamps</h4>
+								<ul>
+									<li><a value="Seek0" onclick="setCurrentTime(0)">0:00</a> : Web scraping with Python</li>
+									<li><a value="Seek1" onclick="setCurrentTime(1)">0:23</a> : Analysing/amending the data</li>
+									<li><a value="Seek2" onclick="setCurrentTime(2)">0:40</a> : Sorting & CRUD functionality</li>
+									<li><a value="Seek3" onclick="setCurrentTime(3)">1:11</a> : Updating Spotify account</li>
+								</ul>
+								
+								<hr />								
+
+								<h3 class="major">code</h3>
+								<ul class="actions">
+									<!-- <li><a href="#" class="button primary">Live demo</a></li> -->
+									<li><a href="#" target="_blank" class="button">web scraper</a></li>
+									<li><a href="https://github.com/ShaunBillows/portify-server" target="_blank" class="button">server</a></li>
+									<li><a href="https://github.com/ShaunBillows/portify" target="_blank" class="button">interface</a></li>
+								</ul>
+							</article>
+
+
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; ShaunBillows.github.io/portfolio Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				var tag = document.createElement('script');
+				tag.src = "https://www.youtube.com/iframe_api";
+				var firstScriptTag = document.getElementsByTagName('script')[0];
+				firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+				var player;
+				function onYouTubeIframeAPIReady() {
+				  player = new YT.Player('player', {
+					// height: '210',
+					width: '100%',
+					aspectRatio: 'Ź10/340',
+					videoId: 'AedKDJQEM_A',
+				  });
+				}
+				function setCurrentTime(slideNum) {
+				  var object = [ 0, 23, 40, 71 ];
+				  player.seekTo(object[slideNum]);
+				}
+			  </script>
+
+	</body>
+</html>
