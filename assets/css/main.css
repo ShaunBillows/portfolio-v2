@@ -11,6 +11,8 @@
 	/* outline: limegreen 1px solid; */
 }
 
+
+
 .center {
 	display: flex;
 	justify-content: center;
@@ -1689,3 +1691,19 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+		
+ul .hover {
+	background-color: white;
+	background-color: white;
+	transition: 0s;
+}
+ul .hover:hover {
+	background-color: white;
+	background-color: white;
+}
+ul .hover:focus {
+	background-color: white;
+	background-color: white;
+	transition: 0s;
+}
