@@ -1,71 +1,104 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
 	Dimension by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Dimension by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript> 
-	</head>
-	<body class="is-preload">
+  <head>
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <div class="logo">
+          <!-- <span class="icon fa-gem"></span> -->
+          <!-- <span class="fa fa-shuttle-space"></span> -->
+          <!-- <a href="https://github.com/ShaunBillows/" target="_blank"><span class="fas fa-github fa-2x "></span></a> -->
+          <a
+            href="https://github.com/ShaunBillows"
+            target="_blank"
+            class="icon brands fa-github"
+            ><span class="label">GitHub</span></a
+          >
+        </div>
+        <div class="content">
+          <div class="inner">
+            <h1>Shaun Billows</h1>
+            <p>Software Engineer portfolio</p>
+          </div>
+        </div>
+        <nav>
+          <ul class="hoverChange">
+            <li class="hover">
+              <a
+                href="#intro"
+                class="button primary hover"
+                style="border-radius: 0em"
+              >
+                PROJECT I</a
+              >
+            </li>
+            <li><a href="#work">PROJECT II</a></li>
+            <li><a href="#about">PROJECT III</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <!-- <li><a href="#elements">Elements</a></li> -->
+          </ul>
+        </nav>
+      </header>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+      <!-- Main -->
+      <div id="main">
+        <!-- portify -->
+        <article id="intro">
+          <h2 class="major">Portify</h2>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<!-- <span class="icon fa-gem"></span> -->
-							<!-- <span class="fa fa-shuttle-space"></span> -->
-							<!-- <a href="https://github.com/ShaunBillows/" target="_blank"><span class="fas fa-github fa-2x "></span></a> -->
-							<a href="https://github.com/ShaunBillows" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a>
-							
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Shaun Billows</h1>
-								<p>Software Engineer portfolio</p>
-							</div>
-						</div>
-						<nav>
-							<ul class="hoverChange">
-								<li class="hover">
-									<a href="#intro" class="button primary hover" 
-									style="border-radius: 0em;"
-									>
-									PROJECT I</a>
-									
-								</li>
-								<li><a href="#work">PROJECT II</a></li>
-								<li><a href="#about">PROJECT III</a></li>
-								<li><a href="#contact">CONTACT</a></li>
-								<!-- <li><a href="#elements">Elements</a></li> -->
-							</ul>
-						</nav>
-					</header>
+          <span class="image main"
+            ><img src="images/portify.png" alt=""
+          /></span>
 
-				<!-- Main -->
-					<div id="main">
+          <h4>Code</h4>
+          <ul class="actions center">
+            <li>
+              <a
+                href="https://github.com/ShaunBillows/portify-web-scraper"
+                target="_blank"
+                class="button"
+                >web scraper</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/ShaunBillows/portify-server"
+                target="_blank"
+                class="button"
+                >rest api</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/ShaunBillows/portify"
+                target="_blank"
+                class="button"
+              >
+                interface</a
+              >
+            </li>
+          </ul>
 
-						<!-- portify -->
-							<article id="intro">
-								<h2 class="major">Portify</h2>
-
-								<span class="image main"><img src="images/portify.png" alt="" /></span>
-
-								<h4>Code</h4>
-								<ul class="actions center">
-									<li><a href="https://github.com/ShaunBillows/portify-web-scraper" target="_blank" class="button">web scraper</a></li>
-									<li><a href="https://github.com/ShaunBillows/portify-server" target="_blank" class="button">rest api</a></li>
-									<li><a href="https://github.com/ShaunBillows/portify" target="_blank" class="button"> interface</a></li>
-								</ul>
-
-								<h4>introduction / Problem Statement</h4>
+          <!-- <h4>introduction / Problem Statement</h4>
 								<p>As an avid user of Spotify I was always disappointed by its genre filtering capabilities, particularly when it came to dance music.  I set out to create an application to solve this problem by combining the functionality of Spotify and Beatport, an online electronic music store which classifies it's electronic music collection into broad, discrete genre categories, unlike Spotify.</p>
 
 								<h4>Methodology / Implementation</h4>
@@ -78,106 +111,235 @@
 								<p> Portify's interface supports full CRUD functionality.  Playlists can edited, copied, merged, deleted and, importantly, sorted by genre.  Since the Spotify URI for each track is preserved, Portify's playlists can be uploaded back to Spotify on the click of a button. </p>
 
 								<h4>Conclusion</h4>
-								<p> Portify allows Spotify playlists to be sorted accurately into sub playlists based on their Beatport genre and uploaded back to Spotify.  Additionally, playlists are stored in a database where they can be edited, copied, merged and deleted using a custom-made UI.</p>
+								<p> Portify allows Spotify playlists to be sorted accurately into sub playlists based on their Beatport genre and uploaded back to Spotify.  Additionally, playlists are stored in a database where they can be edited, copied, merged and deleted using a custom-made UI.</p> -->
 
-								<!-- <iframe width="100%" style="aspect-ratio: 420/315;"
+          <h4>introduction / Problem Statement</h4>
+          <p>
+            As an avid user of Spotify I was always disappointed by its genre
+            filtering capabilities, particularly when it came to dance music. I
+            set out to create an application to solve this problem by combining
+            the functionality of Spotify and Beatport, an online electronic
+            music store which classifies it's electronic music collection into
+            broad, discrete genre categories, unlike Spotify.
+          </p>
+
+          <h4>Methodology / Implementation</h4>
+          <p>
+            Portify consists of two decoupled applications; a Python web scraper
+            for collecting and processing the relevant tracks information from
+            Spotify and Beatport and an interface developed by leveraging the
+            MERN tech stack for displaying and interacting with the data.
+          </p>
+
+          <p>
+            The web scraper connects to Spotify through an API and requests the
+            tracks information about a playlist. For each track in the playlist
+            the genre is found by scraping the corresponding Beatport track URL
+            from a Google search and then parsing the HTML associated with it,
+            using the Requests-HTML and Beautiful Soup libraries respectively.
+            Upon completion the data is loaded into a MongoDB database for
+            further analysis. Python was chosen for this part of the project for
+            its superior web scraping and data mining capabilities.
+          </p>
+
+          <p>
+            To interact with the data a REST API was created using Express.js
+            which pulled it into a interface developed in React. The biggest
+            problem facing the project was errors in the scraped data, due to
+            approximately 5% of the tracks not being on Beatport and another 5%
+            returned with an incorrect genre. The later was largely due to flaws
+            in the URL selection algorithm targeting the data scraped from
+            Google, which contained several, infrequent corner cases that were
+            not accounted for. To solve this problem Portify's interface
+            displays the Beatport URL from which the track's genre was sourced
+            in order to highlight any discrepancies, which can then be corrected
+            for manually.
+          </p>
+
+          <p>
+            Portify’s interface supports full CRUD functionality. Playlists can
+            edited, copied, merged, deleted and, importantly, sorted by genre.
+            Since the Spotify URI for each track is preserved, Portify's
+            playlists can be uploaded back to Spotify on the click of a button.
+          </p>
+
+          <h4>Conclusion</h4>
+          <p>
+            Portify allows Spotify playlists to be sorted accurately into sub
+            playlists based on their Beatport genre and uploaded back to
+            Spotify. Playlists are stored in a database where they can be
+            edited, copied, merged and deleted using a custom-made user
+            interface.
+          </p>
+
+          <!-- <iframe width="100%" style="aspect-ratio: 420/315;"
 								src="https://www.youtube.com/embed/AedKDJQEM_A">
 								</iframe> -->
-								<!-- <hr /> -->
+          <!-- <hr /> -->
 
+          <h4 class="">Video Demonstration</h4>
 
-								<h4 class="">Video Demonstration</h4>
+          <!-- <h4 style="margin-top: 1rem;">Timestamps</h4> -->
+          <ul>
+            <li>
+              <a
+                value="Seek0"
+                style="cursor: pointer"
+                onclick="setCurrentTime(0)"
+                >0:00</a
+              >
+              : Web scraping with Python
+            </li>
+            <li>
+              <a
+                value="Seek1"
+                style="cursor: pointer"
+                onclick="setCurrentTime(1)"
+                >0:24</a
+              >
+              : Analysing/amending the data
+            </li>
+            <li>
+              <a
+                value="Seek2"
+                style="cursor: pointer"
+                onclick="setCurrentTime(2)"
+                >0:41</a
+              >
+              : Sorting & CRUD functionality
+            </li>
+            <li>
+              <a
+                value="Seek3"
+                style="cursor: pointer"
+                onclick="setCurrentTime(3)"
+                >1:12</a
+              >
+              : Updating Spotify account
+            </li>
+          </ul>
 
-								<!-- <h4 style="margin-top: 1rem;">Timestamps</h4> -->
-								<ul>
-									<li><a value="Seek0" style="cursor:pointer" onclick="setCurrentTime(0)">0:00</a> : Web scraping with Python</li>
-									<li><a value="Seek1" style="cursor:pointer" onclick="setCurrentTime(1)">0:24</a> : Analysing/amending the data</li>
-									<li><a value="Seek2" style="cursor:pointer" onclick="setCurrentTime(2)">0:41</a> : Sorting & CRUD functionality</li>
-									<li><a value="Seek3" style="cursor:pointer" onclick="setCurrentTime(3)">1:12</a> : Updating Spotify account</li>
-								</ul>
+          <div id="player" style="margin-bottom: 0rem"></div>
 
-								<div id="player" style="margin-bottom: 0rem"></div>
-
-
-								<!-- <h4>Code</h4>
+          <!-- <h4>Code</h4>
 								<ul class="actions">
 									<li><a href="https://github.com/ShaunBillows/portify-web-scraper" target="_blank" class="button">web scraper</a></li>
 									<li><a href="https://github.com/ShaunBillows/portify-server" target="_blank" class="button">rest api</a></li>
 									<li><a href="https://github.com/ShaunBillows/portify" target="_blank" class="button"> interface</a></li>
 								</ul> -->
-								<!-- <hr />								 -->
-								<!-- <h3 class="major" >code</h3>
+          <!-- <hr />								 -->
+          <!-- <h3 class="major" >code</h3>
 								<ul class="actions">
 				
 									<li><a href="https://github.com/ShaunBillows/portify-web-scraper" target="_blank" class="button">web scraper</a></li>
 									<li><a href="https://github.com/ShaunBillows/portify-server" target="_blank" class="button">rest api</a></li>
 									<li><a href="https://github.com/ShaunBillows/portify" target="_blank" class="button"> interface</a></li>
 								</ul> -->
-							</article>
+        </article>
 
-						<!-- e sports -->
-							<article id="work">
-								<h2 class="major">E-Sports App</h2>
+        <!-- e sports -->
+        <article id="work">
+          <h2 class="major">E-Sports App</h2>
 
-								<span class="image main"><img src="images/vgc.png" alt="" /></span>
-								<p class="section">
-								VGC is the front end mvp for an e-sports app (no server) which is currently under development.  Designed to recreate the experience of playing for a real football club, but virtually.  VGC will automate the running of 11v11 football tournaments.  Players and managers have different roles, players can be signed and released from contracts, formations are customisable and player statistics are tracked across history.
-								</p>
-								<!-- <hr /> -->
-								<h4 class="major">Features</h4>
-								<ul>
-									<li>Fully responsive</li>
-									<li>Developed in React</li>
-									<li>Styled by Bootstrap/styled-components/SASS</li>
-									<li>Deployed to Netlify</li>
-									<li>Includes round robin generator (Team Hub page)</li>
-									<li>Customise formations (Team Hub page)</li>
-								</ul>
-								<hr />								
-								<!-- <h4>Notable Features</h4> -->
-								<ul class="actions right">
-									<li><a href="https://virtual-gaming-community.netlify.app" target="_blank" class="button primary">Live demo</a></li>
-									<!-- <li><a href="#" class="button">view code</a></li> -->
-								</ul>
-							
+          <span class="image main"><img src="images/vgc.png" alt="" /></span>
+          <p class="section">
+            VGC is the front end MVP for an e-sports app (no server) which is
+            currently under development. Designed to recreate the experience of
+            playing for a real football club, but virtually. VGC will automate
+            the running of 11v11 football tournaments. Players and managers have
+            different roles, players can be signed and released from contracts,
+            formations are customisable and player statistics are tracked across
+            history.
+          </p>
+          <!-- <hr /> -->
+          <h4 class="major">Features</h4>
+          <ul>
+            <li>Fully responsive</li>
+            <li>Developed in React</li>
+            <li>Styled by Bootstrap/styled-components/SASS</li>
+            <li>Deployed to Netlify</li>
+            <li>Includes round robin generator (Team Hub page)</li>
+            <li>Customisable formations (Team Hub page)</li>
+          </ul>
+          <hr />
+          <!-- <h4>Notable Features</h4> -->
+          <ul class="actions right">
+            <li>
+              <a
+                href="https://virtual-gaming-community.netlify.app"
+                target="_blank"
+                class="button primary"
+                >Live demo</a
+              >
+            </li>
+            <!-- <li><a href="#" class="button">view code</a></li> -->
+          </ul>
 
-							<!-- </div> -->
-							</article>
+          <!-- </div> -->
+        </article>
 
-						<!-- trade wars -->
-							<article id="about">
-								<h2 class="major">Trading Simulator</h2>
-								<span class="image main"><img src="images/trade-wars.png" alt="" /></span>
-								<p>TradeWars is a modern, scalable full-stack web application developed by leveraging the MERN tech stack.  Enables users to buy/sell stocks on the NYSE and keep track of the real-time value of their portfolio.  Salient features include persistent login, protected routes and responsive design.  To access the demo account use ‘dev’ for the username and password, or create a brand new account.</p>
+        <!-- trade wars -->
+        <article id="about">
+          <h2 class="major">Trading Simulator</h2>
+          <span class="image main"
+            ><img src="images/trade-wars.png" alt=""
+          /></span>
+          <p>
+            TradeWars is a modern, scalable full-stack web application developed
+            by leveraging the MERN tech stack. Enables users to buy/sell stocks
+            on the NYSE and keep track of the real-time value of their
+            portfolio. Salient features include persistent login, protected
+            routes and responsive design. To access the demo account use ‘dev’
+            for the username and password, or create a brand new account.
+          </p>
 
-								
+          <h4 class="major">Features</h4>
 
-								<h4 class="major">Features</h4>
+          <ul>
+            <li>Developed by leveraging the MERN tech stack</li>
+            <li>Styled by styled-components/CSS</li>
+            <li>Deployed to Heroku/Netlify</li>
+            <li>Fully responsive</li>
+            <li>Persistant login</li>
+            <li>Protected routes</li>
+            <li>JWT cookie authentication</li>
+            <li>Bcrypt password hashing</li>
+            <li>Consumes third party API</li>
+            <li>CRUD functionality</li>
+          </ul>
 
-								<ul  >
-									<li>Developed by leveraging the MERN tech stack</li>
-									<li>Styled by styled-components/CSS</li>
-									<li>Deployed to Heroku/Netlify</li>
-									<li>Fully responsive</li>
-									<li>Persistant login</li>
-									<li>Protected routes</li>
-									<li>JWT cookie authentication</li>
-									<li>Bcrypt password hashing</li>
-									<li>Consumes third party API</li>
-									<li>CRUD functionality</li>
-								</ul>
+          <hr />
 
-								<hr />								
+          <ul class="actions right">
+            <li>
+              <a
+                href="https://trade-war-z.netlify.app/login"
+                target="_blank"
+                class="button primary"
+                >Live demo</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/ShaunBillows/trading-app-front-end"
+                target="_blank"
+                class="button"
+                >front end code</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/ShaunBillows/trading-app-back-end"
+                target="_blank"
+                class="button"
+                >back end code</a
+              >
+            </li>
+          </ul>
 
-								<ul class="actions right">
-									<li><a href="https://trade-war-z.netlify.app/login" target="_blank" class="button primary">Live demo</a></li>
-									<li><a href="https://github.com/ShaunBillows/trading-app-front-end" target="_blank" class="button">front end code</a></li>
-									<li><a href="https://github.com/ShaunBillows/trading-app-back-end" target="_blank" class="button">back end code</a></li>
-								</ul>
+          <!-- <hr />	 -->
 
-								<!-- <hr />	 -->
-
-								<!-- <h4 >code snippets</h4>
+          <!-- <h4 >code snippets</h4>
 								<pre><code>i = 0;
 
 while (!deck.isInOrder()) {
@@ -197,62 +359,94 @@ i++;
 }
 
 print 'It took ' + i + ' iterations to sort the deck.';</code></pre> -->
+        </article>
 
-							</article>
+        <!-- Contact -->
+        <article id="contact">
+          <h2 class="major">Contact</h2>
+          <form
+            method="post"
+            onsubmit="thankyouMessage()"
+            action="https://formsubmit.co/billows.shaun@gmail.com"
+          >
+            <input type="hidden" name="_subject" value="New Job Offer!" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://shaunbillows.github.io/portfolio-v2/"
+            />
+            <div class="fields">
+              <div class="field half">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required />
+              </div>
+              <div class="field half">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <ul class="actions">
+              <li>
+                <input type="submit" value="Send Message" class="primary" />
+              </li>
+              <li><input type="reset" value="Reset" /></li>
+            </ul>
+          </form>
+          <ul class="icons">
+            <!-- <li><a href="#" class="icon brands fa-linkedin"><span class="label">Twitter</span></a></li> -->
+            <!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li> -->
+            <!-- <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
+            <li>
+              <a
+                href="https://github.com/ShaunBillows"
+                target="_blank"
+                class="icon brands fa-github"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+          </ul>
+        </article>
 
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" onsubmit="thankyouMessage()" action="https://formsubmit.co/billows.shaun@gmail.com">
-									<input type="hidden" name="_subject" value="New Job Offer!">
-									<input type="hidden" name="_next" value="https://shaunbillows.github.io/portfolio-v2/">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" required/>
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="email" name="email" id="email" required/>
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4" required></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<!-- <li><a href="#" class="icon brands fa-linkedin"><span class="label">Twitter</span></a></li> -->
-									<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li> -->
-									<!-- <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
-									<li><a href="https://github.com/ShaunBillows" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
+        <!-- Elements -->
+        <article id="elements">
+          <h2 class="major">Elements</h2>
 
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
-
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
+          <section>
+            <h3 class="major">Text</h3>
+            <p>
+              This is <b>bold</b> and this is <strong>strong</strong>. This is
+              <i>italic</i> and this is <em>emphasized</em>. This is
+              <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+              This is <u>underlined</u> and this is code:
+              <code>for (;;) { ... }</code>. Finally,
+              <a href="#">this is a link</a>.
+            </p>
+            <hr />
+            <h2>Heading Level 2</h2>
+            <h3>Heading Level 3</h3>
+            <h4>Heading Level 4</h4>
+            <h5>Heading Level 5</h5>
+            <h6>Heading Level 6</h6>
+            <hr />
+            <h4>Blockquote</h4>
+            <blockquote>
+              Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis
+              sagittis eget tempus euismod. Vestibulum ante ipsum primis in
+              faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat
+              ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in
+              faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.
+            </blockquote>
+            <h4>Preformatted</h4>
+            <pre><code>i = 0;
 
 while (!deck.isInOrder()) {
     print 'Iteration ' + i;
@@ -261,264 +455,320 @@ while (!deck.isInOrder()) {
 }
 
 print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+          </section>
 
-								<section>
-									<h3 class="major">Lists</h3>
+          <section>
+            <h3 class="major">Lists</h3>
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+            <h4>Unordered</h4>
+            <ul>
+              <li>Dolor pulvinar etiam.</li>
+              <li>Sagittis adipiscing.</li>
+              <li>Felis enim feugiat.</li>
+            </ul>
 
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+            <h4>Alternate</h4>
+            <ul class="alt">
+              <li>Dolor pulvinar etiam.</li>
+              <li>Sagittis adipiscing.</li>
+              <li>Felis enim feugiat.</li>
+            </ul>
 
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
+            <h4>Ordered</h4>
+            <ol>
+              <li>Dolor pulvinar etiam.</li>
+              <li>Etiam vel felis viverra.</li>
+              <li>Felis enim feugiat.</li>
+              <li>Dolor pulvinar etiam.</li>
+              <li>Etiam vel felis lorem.</li>
+              <li>Felis enim et feugiat.</li>
+            </ol>
+            <h4>Icons</h4>
+            <ul class="icons">
+              <li>
+                <a href="#" class="icon brands fa-twitter"
+                  ><span class="label">Twitter</span></a
+                >
+              </li>
+              <li>
+                <a href="#" class="icon brands fa-facebook-f"
+                  ><span class="label">Facebook</span></a
+                >
+              </li>
+              <li>
+                <a href="#" class="icon brands fa-instagram"
+                  ><span class="label">Instagram</span></a
+                >
+              </li>
+              <li>
+                <a href="#" class="icon brands fa-github"
+                  ><span class="label">Github</span></a
+                >
+              </li>
+            </ul>
 
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
+            <h4>Actions</h4>
+            <ul class="actions">
+              <li><a href="#" class="button primary">Default</a></li>
+              <li><a href="#" class="button">Default</a></li>
+            </ul>
+            <ul class="actions stacked">
+              <li><a href="#" class="button primary">Default</a></li>
+              <li><a href="#" class="button">Default</a></li>
+            </ul>
+          </section>
 
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
+          <section>
+            <h3 class="major">Table</h3>
+            <h4>Default</h4>
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Item One</td>
+                    <td>Ante turpis integer aliquet porttitor.</td>
+                    <td>29.99</td>
+                  </tr>
+                  <tr>
+                    <td>Item Two</td>
+                    <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                    <td>19.99</td>
+                  </tr>
+                  <tr>
+                    <td>Item Three</td>
+                    <td>Morbi faucibus arcu accumsan lorem.</td>
+                    <td>29.99</td>
+                  </tr>
+                  <tr>
+                    <td>Item Four</td>
+                    <td>Vitae integer tempus condimentum.</td>
+                    <td>19.99</td>
+                  </tr>
+                  <tr>
+                    <td>Item Five</td>
+                    <td>Ante turpis integer aliquet porttitor.</td>
+                    <td>29.99</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="2"></td>
+                    <td>100.00</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
 
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
+            <h4>Alternate</h4>
+            <div class="table-wrapper">
+              <table class="alt">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Item One</td>
+                    <td>Ante turpis integer aliquet porttitor.</td>
+                    <td>29.99</td>
+                  </tr>
+                  <tr>
+                    <td>Item Two</td>
+                    <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                    <td>19.99</td>
+                  </tr>
+                  <tr>
+                    <td>Item Three</td>
+                    <td>Morbi faucibus arcu accumsan lorem.</td>
+                    <td>29.99</td>
+                  </tr>
+                  <tr>
+                    <td>Item Four</td>
+                    <td>Vitae integer tempus condimentum.</td>
+                    <td>19.99</td>
+                  </tr>
+                  <tr>
+                    <td>Item Five</td>
+                    <td>Ante turpis integer aliquet porttitor.</td>
+                    <td>29.99</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="2"></td>
+                    <td>100.00</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </section>
 
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
+          <section>
+            <h3 class="major">Buttons</h3>
+            <ul class="actions">
+              <li><a href="#" class="button primary">Primary</a></li>
+              <li><a href="#" class="button">Default</a></li>
+            </ul>
+            <ul class="actions">
+              <li><a href="#" class="button">Default</a></li>
+              <li><a href="#" class="button small">Small</a></li>
+            </ul>
+            <ul class="actions">
+              <li>
+                <a href="#" class="button primary icon solid fa-download"
+                  >Icon</a
+                >
+              </li>
+              <li>
+                <a href="#" class="button icon solid fa-download">Icon</a>
+              </li>
+            </ul>
+            <ul class="actions">
+              <li><span class="button primary disabled">Disabled</span></li>
+              <li><span class="button disabled">Disabled</span></li>
+            </ul>
+          </section>
 
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
+          <section>
+            <h3 class="major">Form</h3>
+            <form method="post" action="#">
+              <div class="fields">
+                <div class="field half">
+                  <label for="demo-name">Name</label>
+                  <input
+                    type="text"
+                    name="demo-name"
+                    id="demo-name"
+                    value=""
+                    placeholder="Jane Doe"
+                  />
+                </div>
+                <div class="field half">
+                  <label for="demo-email">Email</label>
+                  <input
+                    type="email"
+                    name="demo-email"
+                    id="demo-email"
+                    value=""
+                    placeholder="jane@untitled.tld"
+                  />
+                </div>
+                <div class="field">
+                  <label for="demo-category">Category</label>
+                  <select name="demo-category" id="demo-category">
+                    <option value="">-</option>
+                    <option value="1">Manufacturing</option>
+                    <option value="1">Shipping</option>
+                    <option value="1">Administration</option>
+                    <option value="1">Human Resources</option>
+                  </select>
+                </div>
+                <div class="field half">
+                  <input
+                    type="radio"
+                    id="demo-priority-low"
+                    name="demo-priority"
+                    checked
+                  />
+                  <label for="demo-priority-low">Low</label>
+                </div>
+                <div class="field half">
+                  <input
+                    type="radio"
+                    id="demo-priority-high"
+                    name="demo-priority"
+                  />
+                  <label for="demo-priority-high">High</label>
+                </div>
+                <div class="field half">
+                  <input type="checkbox" id="demo-copy" name="demo-copy" />
+                  <label for="demo-copy">Email me a copy</label>
+                </div>
+                <div class="field half">
+                  <input
+                    type="checkbox"
+                    id="demo-human"
+                    name="demo-human"
+                    checked
+                  />
+                  <label for="demo-human">Not a robot</label>
+                </div>
+                <div class="field">
+                  <label for="demo-message">Message</label>
+                  <textarea
+                    name="demo-message"
+                    id="demo-message"
+                    placeholder="Enter your message"
+                    rows="6"
+                  ></textarea>
+                </div>
+              </div>
+              <ul class="actions">
+                <li>
+                  <input type="submit" value="Send Message" class="primary" />
+                </li>
+                <li><input type="reset" value="Reset" /></li>
+              </ul>
+            </form>
+          </section>
+        </article>
+      </div>
 
-							</article>
+      <!-- Footer -->
+      <footer id="footer">
+        <p class="copyright" target="_blank">
+          &copy; ShaunBillows.github.io/portfolio Design:
+          <a href="https://html5up.net" target="_blank">HTML5 UP</a>.
+        </p>
+      </footer>
+    </div>
 
-					</div>
+    <!-- BG -->
+    <div id="bg"></div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright" target="_blank">&copy; ShaunBillows.github.io/portfolio Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a>.</p>
-					</footer>
-
-			</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script>
-				//  YT Player w/ links
-				var tag = document.createElement('script');
-				tag.src = "https://www.youtube.com/iframe_api";
-				var firstScriptTag = document.getElementsByTagName('script')[0];
-				firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-				var player;
-				function onYouTubeIframeAPIReady() {
-				  player = new YT.Player('player', {
-					// height: '210',
-					width: '100%',
-					aspectRatio: 'Ź10/340',
-					videoId: 'iGcCJ1TZLOM',
-				  });
-				}
-				function setCurrentTime(slideNum) {
-				  var object = [ 0, 24, 41.5, 71.5 ];
-				  player.seekTo(object[slideNum]);
-				}
-			  </script>
-				<script>
-					//  form submit alert
-					// document.querySelector('#submitForm').addEventListener("click", () => alert("Thank you for your message.  I'll get back to you as soon as possible.") )
-					const thankyouMessage = () => alert("Thank you for your message.  Please complete the CAPTCHA on the next page to send it to my email.  I'll get back to you as soon as possible.")
-
-				</script>
-
-	</body>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      //  YT Player w/ links
+      var tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName("script")[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player("player", {
+          // height: '210',
+          width: "100%",
+          aspectRatio: "Ź10/340",
+          videoId: "iGcCJ1TZLOM",
+        });
+      }
+      function setCurrentTime(slideNum) {
+        var object = [0, 24, 41.5, 71.5];
+        player.seekTo(object[slideNum]);
+      }
+    </script>
+    <script>
+      //  form submit alert
+      // document.querySelector('#submitForm').addEventListener("click", () => alert("Thank you for your message.  I'll get back to you as soon as possible.") )
+      const thankyouMessage = () =>
+        alert(
+          "Thank you for your message.  Please complete the CAPTCHA on the next page to send it to my email.  I'll get back to you as soon as possible."
+        );
+    </script>
+  </body>
 </html>
